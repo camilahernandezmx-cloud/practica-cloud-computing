@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómputo en la Nube e Industria 4.0</title>
+<style>
+  :root { --naranja:#ff5a00; --morado:#5e3f8c; --gris:#f4f4f6; --texto:#222; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background: #fff; line-height: 1.6; }
+  header { background: linear-gradient(135deg, var(--naranja), #ff8a3d); color: #fff; padding: 56px 20px; text-align: center; }
+  header h1 { font-size: 2.3rem; margin-bottom: 8px; }
+  header p { font-size: 1.1rem; opacity: .95; }
+  nav { background: var(--morado); text-align: center; padding: 12px; }
+  nav a { color: #fff; text-decoration: none; margin: 0 14px; font-weight: 600; }
+  main { max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+  section { margin-bottom: 44px; }
+  h2 { color: var(--morado); border-left: 6px solid var(--naranja); padding-left: 12px; margin-bottom: 16px; }
+  .tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .tarjeta { background: var(--gris); border-radius: 12px; padding: 20px; border-top: 5px solid var(--naranja); }
+  .tarjeta h3 { color: var(--naranja); margin-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: var(--naranja); color: #fff; padding: 10px; }
+  td { border: 1px solid #ddd; padding: 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: var(--gris); }
+  ul { padding-left: 22px; }
+  footer { background: #222; color: #ddd; text-align: center; padding: 22px; font-size: .9rem; }
+  #reloj { font-weight: 700; color: var(--naranja); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cómputo en la Nube e Industria 4.0</h1>
+  <p>Práctica de Cloud Computing · Generalidades de la Industria 4.0 · Universidad Anáhuac Querétaro</p>
+</header>
+<nav>
+  <a href="#que-es">¿Qué es?</a>
+  <a href="#modelos">Modelos de servicio</a>
+  <a href="#despliegue">Despliegue</a>
+  <a href="#industria">Industria 4.0</a>
+  <a href="#equipo">Equipo</a>
+</nav>
+<main>
+  <section id="que-es">
+    <h2>¿Qué es el cómputo en la nube?</h2>
+    <p>Es un conjunto de servicios basados en web que permite obtener capacidades de cómputo (servidores, almacenamiento, bases de datos, redes y aplicaciones) bajo un modelo de pago por uso, sin necesidad de grandes inversiones iniciales en hardware y software. Sus tres grandes innovaciones son: recursos prácticamente ilimitados bajo demanda, ausencia de inversión inicial y pago conforme se consumen los recursos.</p>
+  </section>
+
+  <section id="modelos">
+    <h2>Modelos de servicio</h2>
+    <div class="tarjetas">
+      <div class="tarjeta"><h3>IaaS</h3><p>Infraestructura como servicio: máquinas virtuales, redes y almacenamiento. Máximo control. Ejemplo: Amazon EC2.</p></div>
+      <div class="tarjeta"><h3>PaaS</h3><p>Plataforma como servicio: el proveedor administra sistema operativo y runtime; el usuario solo despliega su aplicación. Ejemplo: GitHub Pages (donde está publicada esta página).</p></div>
+      <div class="tarjeta"><h3>SaaS</h3><p>Software como servicio: aplicaciones completas listas para usarse desde el navegador. Ejemplo: Microsoft 365, Gmail.</p></div>
+    </div>
+  </section>
+
+  <section id="despliegue">
+    <h2>Modelos de despliegue</h2>
+    <table>
+      <tr><th>Nube pública</th><th>Nube híbrida</th><th>Nube privada</th></tr>
+      <tr>
+        <td>Abierta al público y adquirida mediante suscripción (AWS, Google Cloud, GitHub).</td>
+        <td>Conecta recursos en la nube con infraestructura local de la organización.</td>
+        <td>Recursos atendidos exclusivamente por una organización.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="industria">
+    <h2>La nube como habilitador de la Industria 4.0</h2>
+    <ul>
+      <li>Permite digitalizar procesos y cadenas de valor.</li>
+      <li>Da a las PYMES acceso a tecnología similar a la de grandes empresas sin inversión inicial.</li>
+      <li>Facilita la manufactura en la nube (Cloud Manufacturing), el IoT industrial y la analítica de datos.</li>
+      <li>Ofrece recuperación ante desastres y acceso a la información desde cualquier lugar.</li>
+    </ul>
+  </section>
+
+  <section id="equipo">
+    <h2>Equipo de trabajo</h2>
+    <ul>
+      <li>Integrante 1</li>
+      <li>Integrante 2</li>
+      <li>Integrante 3</li>
+      <li>Integrante 4</li>
+    </ul>
+    <p style="margin-top:14px">Hora local de quien visita la página: <span id="reloj"></span></p>
+  </section>
+</main>
+<footer>
+  Página publicada en la nube con GitHub Pages · Práctica de Cloud Computing · 2026
+</footer>
+<script>
+  function actualizar() { document.getElementById('reloj').textContent = new Date().toLocaleString('es-MX'); }
+  actualizar(); setInterval(actualizar, 1000);
+</script>
+</body>
+</html>
